@@ -1,20 +1,11 @@
-public class Player {
-    int xCoordinaate; // taisarvuline number
-    int yCoordinaate;
-    char symbol;
+public class Player extends Character {
     Direction direction;
     // Ese: xCoordinaate, yCoordinaate, tugevusest, kasutuskordadest, nimest
     Item item; // klassikomplekt Player klassi sees on Item klass
-
     // constructor
     public Player(int worldWidth, int worldHeight) {
-        this.xCoordinaate = getRandomCoordinaate(worldWidth);
-        this.yCoordinaate = getRandomCoordinaate(worldHeight);
-        this.symbol = 'X';
+        super(worldWidth, worldHeight, 'X');
         this.direction = Direction.UP;
-    }
-    private static int getRandomCoordinaate(int worldDimension) {
-        return (int) (Math.random() * (worldDimension - 2) + 1);
     }
 
     // public tähendab, et mõni teine klass saab ka seda funktsiooni välja kutsuda

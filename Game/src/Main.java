@@ -1,5 +1,4 @@
 import org.w3c.dom.ls.LSOutput;
-
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,12 +24,11 @@ public class Main {
 
         World world = new World(10, 5);
 
-
-
-
         Player player = new Player(world.width, world.height);
         Dragon dragon = new Dragon(world.width, world.height);
         Orc orc = new Orc(world.width, world.height);
+
+        List<Character> characters = new ArrayList<>(Arrays.asList(player, dragon, orc));
 
         Item sword = new Item(10, 1,"Mõõk", world.width, world.height);
         Item hammer = new Item(5, 6,"Haamer", world.width, world.height);
@@ -66,6 +64,5 @@ public class Main {
             input = scanner.nextLine();
         }
     }
-
-
+    
 }
