@@ -38,7 +38,5 @@ public class Main {
         System.out.println(fi5.getSugu());
         System.out.println(fi5.getKuupaev());
 
-        //2.16.41
-
     }
 }
